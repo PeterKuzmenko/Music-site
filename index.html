@@ -17,8 +17,26 @@
 					<a href="#" class="vim"></a>
 				</div>
 				<div class="card">
-					<p><a href="#">Cart(2)</a></p>
-					<div class="icon-card"></div>
+					<div class="button" onclick="openned()">
+						<p>Cart(<span id="counter-item"></span>)</p>
+						<div class="icon-card"></div>
+					</div>
+					<div class="box-cart">
+						<div class="cart">
+						<div class="items" id="show-cart">
+							
+						</div>
+						<div class="total-price">
+							<p class="key">Total delivery cost</p>
+							<p id="delivery-cost"></p>
+						</div>
+						<img class="cart-separator" src="images/cart-separator.png" alt="">
+						<div class="lower-cart">
+							<button class="view">View Cart</button>
+							<button class="proceed">Proceed to Checkout</button>
+						</div>
+					</div>
+					</div>
 				</div>
 				<div class="login">
 					<p><a href="#">Login</a>/<a href="#">Register</a></p>
@@ -27,11 +45,11 @@
 		</div>
 		<div class="lowerheader">
 			<div class="center">
-				<div class="logo">
+				<a class="logo" href="index.html">
 					<img src="images/logo.png" alt="">
 					<div class="part-logo">M</div>
 					<div class="store">Store</div>
-				</div>
+				</a>
 				<ul class="main-menu">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="#">CD'<span>s</span></a></li>
@@ -83,66 +101,13 @@
 					<div class="text">LATEST ARRIVALS IN MUSICA</div>
 					<img class="separator" src="images/mini-separator.png" alt="" height="7px">
 					<div class="buttons">
-						<div class="button"></div>
-						<div class="button"></div>
+						<input type="button" class="button" onclick="left()">
+						<input type="button" class="button" onclick="right()">
 					</div>
 				</div>
-				<div class="rows">
-					<div class="row">
-						<img class="art" src="images/music-image-1.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Oh my Deer</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$14.99</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<img class="art" src="images/music-image-2.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Awaken the Hero</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$17.59</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<img class="art" src="images/music-image-3.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Oh my Deer</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$8.39</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<img class="art" src="images/music-image-4.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Ravenna</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$22.99</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
+				<div id="slider">
+					<div class="rows" id="goods1">
+					
 					</div>
 				</div>
 			</div>
@@ -153,82 +118,13 @@
 					<div class="text">ALBUMS CURRENTLY ON SALE</div>
 					<img class="separator" src="images/mini-separator.png" alt="" height="7px">
 					<div class="buttons">
-						<div class="button"></div>
-						<div class="button"></div>
+						<input type="button" class="button" onclick="left1()">
+						<input type="button" class="button" onclick="right1()">
 					</div>
 				</div>
-				<div class="rows">
-					<div class="row">
-						<div class="box-sale">
-							<div class="sale">sale</div>
-						</div>
-						<img class="art" src="images/music-image-5.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Cariboy</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$14.99</div>
-								<div class="price-sale">$8.99</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="box-sale">
-							<div class="sale">sale</div>
-						</div>
-						<img class="art" src="images/music-image-6.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Aqualung</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$14.59</div>
-								<div class="price-sale">$8.99</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="box-sale">
-							<div class="sale">sale</div>
-						</div>
-						<img class="art" src="images/music-image-7.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Strange to ears</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$14.39</div>
-								<div class="price-sale">$8.99</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="box-sale">
-							<div class="sale">sale</div>
-						</div>
-						<img class="art" src="images/music-image-8.png" alt="">
-						<div class="info">
-							<div class="title-of-music">Ravenna</div>
-							<div class="aftor">by Artist</div>
-							<img src="images/rating.png" alt="">
-							<p><span>Lorem ipsum</span> dolor sit amet, con
-							adipiscing elit, sed diam nonu.</p>
-							<div class="buy">
-								<div class="price">$14.99</div>
-								<div class="price-sale">$8.99</div>
-								<div class="add"><a href="">add to cart</a></div>
-							</div>
-						</div>
+				<div id="slider1">
+					<div class="rows" id="goods2">
+					
 					</div>
 				</div>
 			</div>
@@ -317,6 +213,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="cart.js" type="text/javascript"></script>
 </body>
-<script src="index.js" type="text/javascript"></script>
 </html>

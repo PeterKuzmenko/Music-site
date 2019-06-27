@@ -1,0 +1,123 @@
+{
+	"1": {
+		"sale": false,
+		"image": "images/music-image-1.png",
+		"title": "Oh my Deer",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99
+	},
+	"2": {
+		"sale": false,
+		"image": "images/music-image-2.png",
+		"title": "Awaken the Hero",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 17.59
+	},
+	"3": {
+		"sale": false,
+		"image": "images/music-image-3.png",
+		"title": "Oh my Deer",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 8.39
+	},
+	"4": {
+		"sale": false,
+		"image": "images/music-image-4.png",
+		"title": "Ravenna",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 22.99
+	},
+	"5": {
+		"sale": true,
+		"image": "images/music-image-5.png",
+		"title": "Cariboy",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 9.55
+	},
+	"6": {
+		"sale": true,
+		"image": "images/music-image-6.png",
+		"title": "Aqualung",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 6.99
+	},
+	"7": {
+		"sale": true,
+		"image": "images/music-image-7.png",
+		"title": "Strange to ears",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 8.66
+	},
+	"8": {
+		"sale": true,
+		"image": "images/music-image-8.png",
+		"title": "Ravenna",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 8.99
+	},
+	"9": {
+		"sale": false,
+		"image": "images/music-image-1.png",
+		"title": "Oh my Deer",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99
+	},
+	"10": {
+		"sale": false,
+		"image": "images/music-image-2.png",
+		"title": "Awaken the Hero",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 17.59
+	},
+	"11": {
+		"sale": false,
+		"image": "images/music-image-3.png",
+		"title": "Oh my Deer",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 8.39
+	},
+	"12": {
+		"sale": false,
+		"image": "images/music-image-4.png",
+		"title": "Ravenna",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 22.99
+	},
+	"13": {
+		"sale": true,
+		"image": "images/music-image-5.png",
+		"title": "Cariboy",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 9.55
+	},
+	"14": {
+		"sale": true,
+		"image": "images/music-image-6.png",
+		"title": "Aqualung",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 6.99
+	},
+	"15": {
+		"sale": true,
+		"image": "images/music-image-7.png",
+		"title": "Strange to ears",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 8.66
+	},
+	"16": {
+		"sale": true,
+		"image": "images/music-image-8.png",
+		"title": "Ravenna",
+		"text": "Lorem ipsum dolor sit amet, con adipiscing elit, sed diam nonu.",
+		"price": 14.99,
+		"pricesale": 8.99
+	}
+
+}
