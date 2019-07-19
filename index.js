@@ -1,57 +1,23 @@
-var cart = {};
-
-var open = document.querySelector(".cart");
-
-var polosa = document.getElementById("goods1");
-var polosa1 = document.getElementById("goods2");
-var i = 0;
-var y = 0;
-
-
-function itemscount() {
-	var numberPrice = 0;
-	var cartCounter = document.getElementById("counter-item");
-	var totalPrice = document.getElementById("delivery-cost");
-	var allItems = document.querySelectorAll(".item-cart");
-	var prices = document.querySelectorAll(".number");
-	var items = document.querySelector(".items");
-
-	cartCounter.innerHTML = allItems.length;
-
-	for(var i = 0; i < prices.length; i++) {
-		numberPrice += parseFloat(prices[i].innerHTML);
-	}
-
-	if(numberPrice) {
-		totalPrice.innerHTML = "$" + numberPrice.toFixed(2);
-	} else {
-		totalPrice.innerHTML = "$00.00";
-	}
-
-	if(allItems.length == 0) {
-		items.innerHTML = "<h2>cart is empty</h2>";
-	}
-
-}
-
-function openned() {
-	if(open.style.display == "none") {
-		open.style.display = "block";
-	} else {
-		open.style.display = "none"
-	}
-}
+var cart, open, polosa, polosa1, numberPrice, cartCounter, totalPrice, allItems, prices, items, articul, good, good1;
+cart = {};
+open = document.querySelector(".cart");
+polosa = document.getElementById("goods1");
+polosa1 = document.getElementById("goods2");
+totalPrice = document.getElementById("delivery-cost");
+i = 0;
+y = 0;
 
 $(document).ready(function() {
-	loadGoods();
+	loadMusics();
 	checkCart();
 });
 
-function loadGoods() {
+function loadMusics() {
 	$.getJSON("musics.json", function(data) {
 		var music = document.getElementById('goods1');
 		var musicOnSale = document.getElementById('goods2');
 		let out = "";
+		
 		for(var key in data) {
 				out += '<div class="row">';
 				if(data[key].sale){
@@ -107,14 +73,15 @@ function loadGoods() {
 			}
 			document.getElementById('show-cart').innerHTML = out;
 			$('.delete').on('click', deleteMusic);
-			itemscount();
+			itemsCounter();
+			priceCounter();
 		}
 
 		showCart();
 		width();
-		function addToCart() {
 
-			var articul = $(this).attr('data-art');
+		function addToCart() {
+			articul = $(this).attr('data-art');
 			if(cart[articul]){
 				alert("Вы уже добавили этот плейлист в корзину")
 			} else {
@@ -126,7 +93,7 @@ function loadGoods() {
 		}
 
 		function deleteMusic() {
-			var articul = $(this).attr('data-art');
+			articul = $(this).attr('data-art');
 			delete cart[articul];
 			showCart();
 			saveCartToLS();
@@ -147,7 +114,6 @@ function checkCart() {
  	if(localStorage.getItem('cart')){
  		cart = JSON.parse(localStorage.getItem('cart'));
  	}
- 	
 }
 
 function saveCartToLS() {
@@ -155,7 +121,7 @@ function saveCartToLS() {
 }
 
 function right() {
-	let good = polosa.querySelectorAll(".row");
+	good = polosa.querySelectorAll(".row");
 	if(good.length * -240 + 4 * 240 != i){
 		i -= 240;
 	}
@@ -170,7 +136,7 @@ function left() {
 }
 
 function right1() {
-	let good1 = polosa1.querySelectorAll(".row");
+	good1 = polosa1.querySelectorAll(".row");
 	if(good1.length * -240 + 4 * 240 != y){
 		y -= 240;
 	}
@@ -184,3 +150,36 @@ function left1() {
 	polosa1.style.left = y + "px";
 }
 
+function itemsCounter() {
+	cartCounter = document.getElementById("counter-item");
+	allItems = document.querySelectorAll(".item-cart");
+	prices = document.querySelectorAll(".number");
+	items = document.querySelector(".items");
+
+	cartCounter.innerHTML = allItems.length;
+}
+
+function priceCounter() {
+	numberPrice = 0;
+	for(var i = 0; i < prices.length; i++) {
+		numberPrice += parseFloat(prices[i].innerHTML);
+	}
+
+	if(numberPrice) {
+		totalPrice.innerHTML = "$" + numberPrice.toFixed(2);
+	} else {
+		totalPrice.innerHTML = "$00.00";
+	}
+
+	if(allItems.length == 0) {
+		items.innerHTML = "<h2>cart is empty</h2>";
+	}
+}
+
+function openned() {
+	if(open.style.display == "none") {
+		open.style.display = "block";
+	} else {
+		open.style.display = "none"
+	}
+}
